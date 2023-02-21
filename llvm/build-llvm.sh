@@ -7,7 +7,7 @@
 # download pre-built package 
 # PKGN=clang+llvm-$VERN-$DIST
 # TARF=$PKGN.tar.xz
-TARF="/share/clang+llvm-7.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz"
+TARF="/tmp/clang+llvm-7.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz"
 
 # LINK=$BASE/$VERN/$TARF
 # wget $LINK
@@ -17,4 +17,4 @@ tar xvf $TARF
 mv $PKGN build
 
 # remove file
-# rm $TARF
+rm $TARF

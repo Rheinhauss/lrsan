@@ -18,6 +18,7 @@ ENV HTTPS_PROXY="http://127.0.0.1:10809"
 
 RUN git config --global http.proxy http://127.0.0.1:10809
 RUN git clone https://github.com/Rheinhauss/lrsan.git /lrsan
-
+RUN chmod a+rx /lrsan/llvm/build-llvm.sh
+ADD clang+llvm-7.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz /tmp/clang+llvm-7.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz
 RUN cd /lrsan/llvm && ./build-llvm.sh
 RUN cd /lrsan/analyzer && make
